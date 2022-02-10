@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --blue: #14213d;
+  --white: #ffffff;
+  --light-grey: #e5e5e5;
+  --light-blu: #457b9d;
+  --grey: #4f4f4f;
+  --orange: #fca311;
+  --red: #d80000;
+}
+
+body {
+  background-color: var(--light-grey);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#box {
+  background-color: var(--blue);
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 11px 3px var(--blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 100px;
+  border-radius: 5px;
+  margin-bottom: 230px;
+  background-color: var(--light-grey);
+}
+
+.number {
+  font-size: 70px;
+  color: var(--grey);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 350px;
+  height: 130px;
+  margin-top: 230px;
+}
+
+/*--- Button Style---*/
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  height: 130px;
+  width: 100px;
+  color: var(--light-grey);
+  background-color: var(--light-blu);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--light-grey);
+  color: var(--blue);
+}
+
+.reset-btn {
+  font-size: 18px;
+  height: 40px;
+  width: 80px;
+  background: var(--orange);
+  color: var(--blue);
+}
+
+.reset-btn:hover {
+  background: var(--red);
+}
+
+/*---Footer---*/
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  #box {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-top: 90px;
+  }
+
+  .screen {
+    width: 150px;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}
